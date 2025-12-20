@@ -5,14 +5,38 @@ void smallest_in_array(int nums[]){
     int smallest = INT32_MAX;
     int size = 6;
 
-    for(int i=0;  i<size; i++){
+    for(int i=0;  i<size; i++){     // min, max
         if (nums[i] < smallest){
             smallest = nums[i];
         }
+        // smallest = min(nums[i], smallest);
     }
     cout<<"The smallest number in array: "<<smallest<<endl;
 
     return;
+}
+
+void largest_in_array(int nums[]){
+    int largest = INT32_MIN;
+    int size = 6;
+    
+    for(int i=0; i<size; i++){
+        if (nums[i]>largest){
+            largest = nums[i];
+        }
+    }
+    cout<< "The largest number in array: "<<largest<<endl;
+
+    return;
+}
+
+
+// Pass by refrence[ will reflect in main function]
+void change_array(int arr[], int size){
+    for (int i=0; i<size; i++){
+        arr[i] = 2* arr[i];
+    }
+
 }
 
 
@@ -35,6 +59,16 @@ int main(){
 
     int nums[] = {5, 15, 22, 1, -15, 24};
     smallest_in_array(nums);
+    largest_in_array(nums);
+
+    int arr[] = {1, 2, 3};
+    change_array(arr, 3);
+
+    cout<< "In main\n";
+    for (int i=0; i<3; i++){
+        cout<< arr[i] <<" ";
+    }
+    cout<< endl;
 
 
     return 0;
