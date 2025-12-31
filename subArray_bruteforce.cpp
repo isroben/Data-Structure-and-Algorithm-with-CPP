@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-void subArray(){
+void subArray(){    // O(n^3)
     int n = 5;
     int arr[5] = {2, 4, 6, 8, 10};
 
@@ -18,7 +18,7 @@ void subArray(){
     return;
 }
 
-void max_subarr_sum(){  // Brute Force Approach
+void max_subarr_sum(){  // Brute Force Approach O(n^2)
     int maxSum = INT32_MIN, currSum=0;
     int n = 7;
     int arr[7] = {3, -4, 5, 4, -1, 7, -8};
