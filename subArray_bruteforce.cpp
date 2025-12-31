@@ -37,5 +37,7 @@ void max_subarr_sum(){  // Brute Force Approach O(n^2)
 int main(){
     subArray();
 
+    max_subarr_sum();
+
     return 0;
 }
