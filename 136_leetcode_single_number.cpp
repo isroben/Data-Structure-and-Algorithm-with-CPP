@@ -1,5 +1,4 @@
 #include<iostream>
-#include<vector>
 using namespace std;
 
 /* Given a non-empty array of integers "num", every element appears twice except for one. Find that single one. */

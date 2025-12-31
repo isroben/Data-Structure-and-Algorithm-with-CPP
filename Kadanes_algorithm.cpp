@@ -1,5 +1,4 @@
 #include<iostream>
-#include<vector>
 using namespace std;
 
 int maxSum_of_subarray(){   // Most optimized O(n).
