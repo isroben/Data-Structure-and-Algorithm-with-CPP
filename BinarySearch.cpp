@@ -5,7 +5,7 @@ int findTarget(int nums[7], int target){
     int n = 7, st=0, end=n-1;
     
     while(st<=end){
-        int mid = (st+end)/2;
+        int mid = st + (end - st)/2;
         if(target > nums[mid]){
             st = mid + 1;
         }
