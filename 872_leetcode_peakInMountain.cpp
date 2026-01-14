@@ -23,6 +23,6 @@ int main(){
     vector<int> arr = {0,10,5,2};
 
     cout<<peakIndexInMountainArray(arr)<<endl;
-    
+
     return 0;
 }
