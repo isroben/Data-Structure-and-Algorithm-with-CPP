@@ -1,5 +1,14 @@
 #include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
+
+void reverseStr(string &str){
+
+    reverse(str.begin(), str.end());
+    cout<<str;
+
+    return;
+}
 
 int main(){
     string str = "apna collage";
@@ -13,6 +22,8 @@ int main(){
         cout<< ch <<" ";
     }
     cout<<endl;
+
+    reverseStr(str);
 
     return 0;
 }
