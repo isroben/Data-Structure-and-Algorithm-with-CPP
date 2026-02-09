@@ -13,6 +13,8 @@ void reverseStr(string &str){
 int main(){
     string str = "apna collage";
 
+    char str2 = "hello";
+
     for(int i=0; i<str.length(); i++){
         cout<< str[i] <<" ";
     }

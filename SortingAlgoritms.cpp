@@ -41,6 +41,7 @@ void insertionSort(int arr[5]){
         while(prev >= 0 && arr[prev] > curr){
             arr[prev+1] = arr[prev];
             prev--;
+            cout<<prev<<endl;
         }
         arr[prev+1] = curr;
     }
@@ -55,8 +56,8 @@ void insertionSort(int arr[5]){
 int main(){
     int arr[] = {4, 1, 5, 2, 3};
 
-    bubbleSort(arr);
-    selectionSort(arr);
+    // bubbleSort(arr);
+    // selectionSort(arr);
     insertionSort(arr);
 
     return 0;
