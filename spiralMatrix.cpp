@@ -16,9 +16,11 @@ vector<int> SpiralMatrix(vector<vector<int>> &nums){
             ans.push_back(nums[i][ecol]);
         }
         for(int j=ecol-1; j<=scol; j++){
+            if(srow == erow) break;
             ans.push_back(nums[erow][j]);
         }
         for(int i=erow-1; i<= srow+1; i++){
+            if(scol = ecol) break;
             ans.push_back(nums[i][scol]);
         }
         srow++;
