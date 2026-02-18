@@ -3,7 +3,7 @@
 using namespace std;
 
 vector<int> findMissingAndRepeatedValues(vector<vector<int>>& grid){
-    unordered_map<int, int> s;
+    unordered_set<int> s;
     int n = grid.size();
     int a, b;
     vector<int> ans;
