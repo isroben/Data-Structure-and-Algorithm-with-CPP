@@ -52,7 +52,15 @@ vector<vector<int>> threeSomeBetter(vector<int> &nums){
 
 int main(){
     vector<int> nums = {-1,0,1,2,-1,-4};
-    cout<<threeSomeBetter(nums)[0]<<threeSomeBetter(nums)[1]<<threeSomeBetter(nums)[2]<<endl;
+    
+    vector<vector<int>> ans = threeSomeBetter(nums);
+
+    for(int i=0; i<ans.size(); i++){
+        for(int j=0; j<ans[0].size(); j++){
+            cout<<ans[i][j];
+        }
+        cout<<endl;
+    }
 
     return 0;
 }
