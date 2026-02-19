@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-vector<vector<int>> threeSome(vector<int> &nums){
+vector<vector<int>> threeSomeBrute(vector<int> &nums){ // bruteforce
     int n = nums.size();
     vector<vector<int>> ans;
 
@@ -26,8 +26,33 @@ vector<vector<int>> threeSome(vector<int> &nums){
     return ans;
 }
 
+vector<vector<int>> threeSomeBetter(vector<int> &nums){
+    int n = nums.size();
+
+    set<vector<int>> uniqueTriplets;
+
+    for(int i=0; i<n; i++){
+        int tar = -nums[i];
+        set<int> s;
+
+        for(int j=i+1; j<n; j++){
+            int third = tar - nums[j];
+
+            if(s.find(third) != s.end()){
+                vector<int> trip = {nums[i], nums[j], third};
+                sort(trip.begin(), trip.end());
+                uniqueTriplets.insert(trip);
+            }
+            s.insert(nums[j]);
+        }
+    }
+    vector<vector<int>> ans(uniqueTriplets.begin(), uniqueTriplets.end());
+    return ans;
+}
+
 int main(){
-    
+    vector<int> nums = {-1,0,1,2,-1,-4};
+    cout<<threeSomeBetter(nums)[0]<<threeSomeBetter(nums)[1]<<threeSomeBetter(nums)[2]<<endl;
 
     return 0;
 }
